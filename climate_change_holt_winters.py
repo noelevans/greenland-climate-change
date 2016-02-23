@@ -61,8 +61,6 @@ def main():
             print spline_samples
             print trend
             print spline_samples / trend
-            x7s = steps
-            y7s = spline_samples
  
         samples = trend / spline_samples
        
