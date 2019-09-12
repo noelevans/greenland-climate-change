@@ -56,8 +56,8 @@ def main():
     plt.ylabel('Mass')
     plt.grid(True)
     plt.legend()
+    plt.savefig('linear_regression_mean_average_seasonal_adjust.png')
     plt.show()
-    plt.savefig('greenland-mass-change.png')
 
 if __name__ == '__main__':
     main()

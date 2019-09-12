@@ -60,14 +60,14 @@ def main():
         if n == N:
             example_xs = steps
             example_ys = spline_samples
-            print spline_samples
-            print trend
-            print spline_samples / trend
-            print '....'
-            print trend / spline_samples
-            print np.mean(trend / spline_samples)
-            print trend_fn(t)
-            print '....'
+            print(spline_samples)
+            print(trend)
+            print(spline_samples / trend)
+            print('....')
+            print(trend / spline_samples)
+            print(np.mean(trend / spline_samples))
+            print(trend_fn(t))
+            print('....')
  
         samples = trend / spline_samples
        
@@ -80,7 +80,7 @@ def main():
        
         predictions.append(prediction)
        
-    print rmse(test_ys, predictions)
+    print(rmse(test_ys, predictions))
  
     plt.plot(all_xs, all_ys, 'bo', label='Original', fillstyle='none')
     plt.plot(all_xs, spline_fn(all_xs), 'b-')
@@ -93,8 +93,8 @@ def main():
     plt.ylabel('Mass')
     plt.grid(True)
     plt.legend()
+    plt.savefig('holt_winters.png')
     plt.show()
-    plt.savefig('greenland-mass-change.png')
  
  
 if __name__ == '__main__':

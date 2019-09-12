@@ -52,7 +52,7 @@ def main():
         prediction = trend_fn(t) + seasonal_fn(t)
         predictions.append(prediction)
 
-    print rmse(test_ys, predictions)
+    print(rmse(test_ys, predictions))
 
     plt.plot(all_xs, all_ys, 'bo', label='Original', fillstyle='none')
     plt.plot(all_xs, spline_fn(all_xs), 'b-')
@@ -64,8 +64,8 @@ def main():
     plt.ylabel('Mass')
     plt.grid(True)
     plt.legend()
+    plt.savefig('poly_fit_linear_seasonal.png')
     plt.show()
-    plt.savefig('greenland-mass-change.png')
 
 
 if __name__ == '__main__':

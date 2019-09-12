@@ -32,8 +32,8 @@ def main():
     plt.ylabel('Mass')
     plt.grid(True)
     plt.legend()
+    plt.savefig('optimise_poly_fit.png')
     plt.show()
-    plt.savefig('greenland-mass-change-polynomials.png')
 
 if __name__ == '__main__':
     main()

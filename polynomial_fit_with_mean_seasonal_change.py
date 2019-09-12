@@ -48,7 +48,7 @@ def main():
  
         predictions.append(prediction)
        
-    print rmse(test_ys, predictions)
+    print(rmse(test_ys, predictions))
  
     plt.plot(all_xs, all_ys, 'bo', label='Original', fillstyle='none')
     plt.plot(all_xs, yinterp, 'b-')
@@ -60,8 +60,8 @@ def main():
     plt.ylabel('Mass')
     plt.grid(True)
     plt.legend()
+    plt.savefig('polynomial_fit_with_mean_seasonal_change.png')
     plt.show()
-    plt.savefig('greenland-mass-change.png')
  
 if __name__ == '__main__':
     main()

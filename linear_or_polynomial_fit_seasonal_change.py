@@ -46,8 +46,8 @@ def main():
     plt.xlabel('Time')
     plt.ylabel('Mass')
     plt.grid(True)
+    plt.savefig('linear_or_polynomial_fit_seasonal_change.png')
     plt.show()
-    plt.savefig('greenland-mass-change.png')
  
 if __name__ == '__main__':
     main()
