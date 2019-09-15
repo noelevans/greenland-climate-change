@@ -14,3 +14,9 @@ So how to best describe the trend of this data? We could use linear regression; 
 By eye it is clear that linear fit would yield poor accuracy - it doesn't match the trend's shape - but clearly overfitting will be reached if we use a polynomial which can adjust very precisely to the graph's shape. 
 
 ![Too little and too much fitting](under_overfit.png)
+
+Produced by [under_overfit.py](under_overfit.py)
+
+So which of these is the best curve? You can see that drawing a straight line through the data with linear regression, does not capture the downward curve of the trend. With the 40 degree curve, the tails curl biased by the last few data points which are likely to not match the general shape. The same is true of the 20&#176; model. How can we find a better way to find the closest fit to the data?
+
+
