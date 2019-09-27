@@ -1,7 +1,7 @@
 # Greenland climate change
-## Predicting future mass of greenland using statistical methods
+## Predicting future mass of Greenland using statistical methods
 
-This investigation uses a NASA [data source](http://climate.nasa.gov/system/internal_resources/details/original/499_GRN_ANT_mass_changes.csv) showing the mass of Greenland with time.
+This investigation uses a NASA [data source](http://climate.nasa.gov/system/internal_resources/details/original/499_GRN_ANT_mass_changes.csv) showing the mass of Greenland with time. Locally, I am storing it as [greenland-mass-change.csv](greenland-mass-change.csv).
 
 The work largely demonstrates the dichotomy between bias (underfitting) and variance (overfitting). Typically it is more appropriate to deal with time-series data using something like Holt-Winters but that is for another day...
 
@@ -41,9 +41,19 @@ As before the training data is shown, trending downwards with ever more complex 
 
 So we will use the 2 degree model found by the Python library NumPy. To nail down the quadratic explicitly we can retrieve the coefficients found by NumPy to be the best to match this data:
 
-   -1.49674972e+01  5.98259947e+04 -5.97805224e+07
+`-1.49674972e+01  5.98259947e+04 -5.97805224e+07`
+
+i.e.   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y = -14.97x<sup>2</sup>  +  59830x  -  59780000
 
 And just to prove there is nothing "up my sleeve", you can see these values being used in a simple [quadratic plot](quadratic_plot.py) demonstrating the shape matches the data we have.
 
 ### Seasonal fitting
 
+We can now draw a line as appropriately as possible through the trend of Greenland's mass. If it weren't patently clear before; things are looking terrible for Greenland. But we want to predict the mass in March when things seem to be slightly better during a year and in September when each year's nadir is reached. To do this, we need to remove the trend effect to again make a model for the adjustment through each 12 month cycle. Below is a representation of the data without a trend.
+
+![Seasonal effect](seasonal_effect.png)
+
+Created using [seasonal_effect.py](seasonal_effect.py)
+
+In the above figure the extremes can be seen to be growing: the minimum at the end of 2012 is identifiable in the source data as well as here. We now seek to repeat the process of finding the minimum test error after building a model with training data. Again the training data will be that until the end of 2011.
