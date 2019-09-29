@@ -57,3 +57,17 @@ We can now draw a line as appropriately as possible through the trend of Greenla
 Created using [seasonal_effect.py](seasonal_effect.py)
 
 In the above figure the extremes can be seen to be growing: the minimum at the end of 2012 is identifiable in the source data as well as here. We now seek to repeat the process of finding the minimum test error after building a model with training data. Again the training data will be that until the end of 2011.
+
+Here are some examples again of how different polynomials look when fitted to the seasonal data.
+
+![Fitting seasonal models to seasonal fluctuations](seasonal_model_examples.png)
+
+Produced with (seasonal_model_examples.py)[seasonal_model_examples.png]
+
+Again the next task is to identify the best polynomial; the optimal degrees by finding the model with the lowest error on a test set of data (using the pre-2012 data for training).
+
+In the figure immediately below we see the error in prediction for the 2012 onwards data for polynomial models with varying degrees of freedom.
+
+![Comparing seasonal accuracy of polynomial models](seasonal_effect_comparison.png)
+
+Produced with (seasonal_effect_comparison.py)[seasonal_effect_comparison.py]
