@@ -62,7 +62,7 @@ Here are some examples again of how different polynomials look when fitted to th
 
 ![Fitting seasonal models to seasonal fluctuations](seasonal_model_examples.png)
 
-Produced with (seasonal_model_examples.py)[seasonal_model_examples.png]
+Produced with (seasonal_model_examples.py)[seasonal_model_examples.py]
 
 Again the next task is to identify the best polynomial; the optimal degrees by finding the model with the lowest error on a test set of data (using the pre-2012 data for training).
 
